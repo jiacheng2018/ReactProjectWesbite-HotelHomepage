@@ -16,7 +16,7 @@ passport.deserializeUser((id,done)=>{
 passport.use(new GoogleStrategy({
     clientID:keys.googleClientID,
     clientSecret:keys.googleClientSecret,
-    callbackURL:'http://localhost:5000/auth/google/callback', //run time problem
+    callbackURL:'/auth/google/callback', //run time problem
     proxy:true 
 }, async (accessToken,refreshToken,profile,done)=>{
    console.log("accessToken",accessToken);

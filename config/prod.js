@@ -1,6 +1,7 @@
 module.exports={
-    googleClientID:process.env.google_Client_ID,
-    googleClientSecret:process.env.google_Client_Secret,
-    mongoURI:process.env.mongo_URI,
-    cookiekey:process.env.cookie_key,
+    googleClientID:process.env.GOOGLE_CLIENT_ID,
+    googleClientSecret:process.env.GOOGLE_CLIENT_SECRET,
+    mongoURI:process.env.MONGO_URI,
+    cookiekey:process.env.COOKIE_KEY,
+    googleRedirectURI:'https://damp-meadow-12226.herokuapp.com'
 };
