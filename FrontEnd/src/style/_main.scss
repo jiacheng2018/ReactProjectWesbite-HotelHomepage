@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  a{
+      text-decoration: none;
+  }
+  li{
+      list-style: none;
+  }
+  :root {
+    --primaryColor: #af9a7d;
+    --mainWhite: #fff;
+    --offWhite: #f7f7f7;
+    --mainBlack: #222;
+    --mainGrey: #ececec;
+    --darkGrey: #cfcfcf;
+    --mainTransition: all 0.3s linear;
+    --mainSpacing: 3px;
+    --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+    --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+
+  }
+  
+  //support IE 8
+  
+  @mixin font-size($size){
+    font-size:$size;
+    font-size:calculateRem($size);
+  }
+  // usage example
+  // p{@include font-size(14px)};
+  // cross browser support
+  @mixin border-radius($x){
+    -webkit-border-radius:$x;
+    -o-border-radius:$x;
+    -moz-box-radius:$x;
+    border-radius:$x;
+  }
+  @mixin box-shadow($x,$y,$vage,$extend,$color){
+    -webkit-box-shadow:$x $y $vage $extend $color;
+    -o-box-shadow:$x $y $vage $extend $color;
+    -moz-box-shadow:$x $y $vage $extend $color;
+    box-shadow:$x $y $vage $extend $color;
+  }
+  @function calculateRem($size){
+    $remSize:$size/16px;
+    @return $remSize*1rem;
+  }
